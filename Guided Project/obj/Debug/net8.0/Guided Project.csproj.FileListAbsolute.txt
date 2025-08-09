@@ -12,3 +12,4 @@
 /home/leonardo/Documentos/Programacao/microsoftCSharp/Guided Project/Guided Project/obj/Debug/net8.0/Guided Project.pdb
 /home/leonardo/Documentos/Programacao/microsoftCSharp/Guided Project/Guided Project/obj/Debug/net8.0/Guided Project.genruntimeconfig.cache
 /home/leonardo/Documentos/Programacao/microsoftCSharp/Guided Project/Guided Project/obj/Debug/net8.0/ref/Guided Project.dll
+/home/leonardo/Documentos/Programacao/microsoftCSharp/Guided Project/Guided Project/obj/Debug/net8.0/Guided Project.sourcelink.json
