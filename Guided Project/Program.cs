@@ -354,7 +354,65 @@ do
 
         case "4":
             // Ensure animal nicknames and personality descriptions are complete
-            Console.WriteLine("Challenge Project - please check back soon to see progress.");
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    if (ourAnimals[i, 3] == "Nickname: ")
+                    {
+                        Console.WriteLine($"Enter a nickname for {ourAnimals[i, 0]}");
+
+                        string nickname;
+                        bool validator = false;
+
+                        do
+                        {
+                            readResult = Console.ReadLine();
+
+                            if (!string.IsNullOrWhiteSpace(readResult))
+                            {
+                                animalNickname = readResult;
+                                validator = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("The nickname can not be empty");
+                                Console.WriteLine("Please, type a valid nickname");
+                            }
+                            
+                        } while (!validator);
+
+                        ourAnimals[i, 3] = $"Nickname: {animalNickname}";
+                    }
+
+                    if (ourAnimals[i, 5] == "Personality: ")
+                    {
+                        Console.WriteLine($"Enter a personality description for {ourAnimals[i, 0]}");
+
+                        string personalityDescription;
+                        bool validator = false;
+                        
+                        do
+                        {
+                            readResult = Console.ReadLine();
+
+                            if (!string.IsNullOrWhiteSpace(readResult))
+                            {
+                                animalPersonalityDescription = readResult;
+                                validator = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("The personality description can not be empty.");
+                                Console.WriteLine("Please, enter a valid description");
+                            }
+                            
+                        } while (!validator);
+                        ourAnimals[i, 5] = $"Personality: {animalPersonalityDescription}";
+                    }
+                }
+            }
+
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
